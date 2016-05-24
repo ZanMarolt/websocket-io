@@ -1,0 +1,5 @@
+node_modules
+bower_components
+.idea/
+app/node_modules/
+app/bower_components/

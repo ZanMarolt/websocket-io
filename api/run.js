@@ -10,10 +10,11 @@ server.listen(3033);
 
 io.on('connection', (socket)=>{
 
-    socket.emit('message', { hello:'World'});
-
     socket.on('message', (data)=>{
-       console.log(data);
+
+        socket.emit('messages', data);
+        socket.broadcast.emit('message', data);
+
     });
 
 });
